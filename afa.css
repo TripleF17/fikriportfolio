@@ -94,6 +94,48 @@ nav {
   margin-bottom: 1rem;
 }
 
+/* Education Section */
+#education {
+    padding: 2em 1em;
+    background-color: #EC8305;
+    color: #091057;
+    border-radius: 15px;
+    margin: 2em auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#education h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+.education-item {
+    margin-bottom: 1.5em;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.education-item h3 {
+    font-size: 1.5em;
+    color: #00bcd4;
+    margin-bottom: 0.5em;
+}
+
+.education-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #f1f1f1;
+}
+
+.education-item p strong {
+    color: #00bcd4; /* Make labels stand out */
+}
+
 /* Skills Section */
 .skills-section {
   padding: 4rem 2rem;
@@ -149,6 +191,7 @@ nav {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative; /* Make it easier to position the hidden text */
   transition: transform 0.3s, background-color 0.3s;
 }
 
@@ -167,6 +210,28 @@ nav {
   color: #f1f1f1;
   font-size: 1.2rem;
 }
+
+.project-description {
+  color: #f1f1f1;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+.project-card:hover .project-description {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
 
 /* Contact Section */
 .contact-section {
